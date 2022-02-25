@@ -10,19 +10,39 @@ import AWSMobileClient
 import AWSAuthCore
 
 class ViewController: UIViewController {
+    enum AuthFlow: String {
+        case USER_SRP_AUTH = "awsconfiguration-USER_SRP_AUTH"
+        case USER_PASSWORD_AUTH = "awsconfiguration-USER_PASSWORD_AUTH"
+        case CUSTOM_AUTH = "awsconfiguration-CUSTOM-AUTH"
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
- 
+
+    }
+    
+    @IBAction func configureSRPAuth(_ sender: Any) {
+        self.configureFlow(authType: AuthFlow.USER_SRP_AUTH)
+    }
+    
+
+    @IBAction func configureUserPasswordAuth(_ sender: Any) {
+        self.configureFlow(authType: AuthFlow.USER_PASSWORD_AUTH)
+    }
+    
+    @IBAction func configureCustomAuth(_ sender: Any) {
+        self.configureFlow(authType: AuthFlow.CUSTOM_AUTH)
+    }
+    
+    
+    func configureFlow(authType: AuthFlow) {
         do {
-            try AWSConfiguration.configure()
+            try AWSConfiguration.configure(authFile: authType.rawValue)
             print("Yayy SDK configured")
         } catch _ {
            print("Some kind of exception")
         }
     }
-
 }
 
 class AWSConfiguration {
@@ -39,8 +59,8 @@ class AWSConfiguration {
         return try Data(contentsOf: url)
     }
     
-    static func configure() throws {
-        let configurationData = try retrieve(forResource: "awsconfiguration")
+    static func configure(authFile: String) throws {
+        let configurationData = try retrieve(forResource: authFile)
         let authConfig = (try? JSONSerialization.jsonObject(with: configurationData, options: [])
             as? [String: Any]) ?? [:]
         AWSInfo.configureDefaultAWSInfo(authConfig)
