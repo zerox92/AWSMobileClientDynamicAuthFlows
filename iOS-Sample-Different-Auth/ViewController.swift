@@ -7,7 +7,6 @@
 
 import UIKit
 import AWSMobileClient
-import AWSAuthCore
 
 class ViewController: UIViewController {
     enum AuthFlow: String {
@@ -21,20 +20,6 @@ class ViewController: UIViewController {
 
     }
     
-    @IBAction func configureSRPAuth(_ sender: Any) {
-        self.configureFlow(authType: AuthFlow.USER_SRP_AUTH)
-    }
-    
-
-    @IBAction func configureUserPasswordAuth(_ sender: Any) {
-        self.configureFlow(authType: AuthFlow.USER_PASSWORD_AUTH)
-    }
-    
-    @IBAction func configureCustomAuth(_ sender: Any) {
-        self.configureFlow(authType: AuthFlow.CUSTOM_AUTH)
-    }
-    
-    
     func configureFlow(authType: AuthFlow) {
         do {
             try AWSConfiguration.configure(authFile: authType.rawValue)
@@ -45,31 +30,24 @@ class ViewController: UIViewController {
     }
 }
 
-class AWSConfiguration {
-    enum AppError: Error {
-        case configurationDontExist
+extension ViewController {
+    @IBAction func configureSRPAuth(_ sender: Any) {
+        configureFlow(authType: AuthFlow.USER_SRP_AUTH)
     }
     
-    static func retrieve(forResource: String) throws -> Data {
-        guard let path = Bundle(for: self).path(forResource: forResource, ofType: "json") else {
-            throw AppError.configurationDontExist
-        }
 
-        let url = URL(fileURLWithPath: path)
-        return try Data(contentsOf: url)
+    @IBAction func configureUserPasswordAuth(_ sender: Any) {
+        configureFlow(authType: AuthFlow.USER_PASSWORD_AUTH)
     }
     
-    static func configure(authFile: String) throws {
-        let configurationData = try retrieve(forResource: authFile)
-        let authConfig = (try? JSONSerialization.jsonObject(with: configurationData, options: [])
-            as? [String: Any]) ?? [:]
-        AWSInfo.configureDefaultAWSInfo(authConfig)
-        AWSMobileClient.default().initialize { _, error in
-            guard error == nil else {
-                print("Error initializing AWSMobileClient. Error: \(error!.localizedDescription)")
-                return
-            }
-            print("AWSMobileClient initialized.")
+    @IBAction func configureCustomAuth(_ sender: Any) {
+        configureFlow(authType: AuthFlow.CUSTOM_AUTH)
+    }
+    
+    @IBAction func signIn(_ sender: Any) {
+        AWSMobileClient.default().signOut()
+        AWSMobileClient.default().signIn(username: "iamanjum", password: "Windows@123") { result, error in
+            print("")
         }
     }
 }
