@@ -14,7 +14,10 @@
 		1EEF4B0E27C92D2200A5FBDB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1EEF4B0C27C92D2200A5FBDB /* Main.storyboard */; };
 		1EEF4B1027C92D2400A5FBDB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1EEF4B0F27C92D2400A5FBDB /* Assets.xcassets */; };
 		1EEF4B1327C92D2400A5FBDB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1EEF4B1127C92D2400A5FBDB /* LaunchScreen.storyboard */; };
-		1EEF4B1B27C934C000A5FBDB /* awsconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = 1EEF4B1A27C934C000A5FBDB /* awsconfiguration.json */; };
+		1EEF4B1F27C937E600A5FBDB /* awsconfiguration-CUSTOM-AUTH.json in Resources */ = {isa = PBXBuildFile; fileRef = 1EEF4B1C27C937E600A5FBDB /* awsconfiguration-CUSTOM-AUTH.json */; };
+		1EEF4B2027C937E600A5FBDB /* awsconfiguration-USER_PASSWORD_AUTH.json in Resources */ = {isa = PBXBuildFile; fileRef = 1EEF4B1D27C937E600A5FBDB /* awsconfiguration-USER_PASSWORD_AUTH.json */; };
+		1EEF4B2127C937E600A5FBDB /* awsconfiguration-USER_SRP_AUTH.json in Resources */ = {isa = PBXBuildFile; fileRef = 1EEF4B1E27C937E600A5FBDB /* awsconfiguration-USER_SRP_AUTH.json */; };
+		1EEF4B2327C9426D00A5FBDB /* AWSConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EEF4B2227C9426D00A5FBDB /* AWSConfiguration.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,7 +29,10 @@
 		1EEF4B0F27C92D2400A5FBDB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1EEF4B1227C92D2400A5FBDB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1EEF4B1427C92D2400A5FBDB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1EEF4B1A27C934C000A5FBDB /* awsconfiguration.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = awsconfiguration.json; sourceTree = SOURCE_ROOT; };
+		1EEF4B1C27C937E600A5FBDB /* awsconfiguration-CUSTOM-AUTH.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "awsconfiguration-CUSTOM-AUTH.json"; sourceTree = SOURCE_ROOT; };
+		1EEF4B1D27C937E600A5FBDB /* awsconfiguration-USER_PASSWORD_AUTH.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "awsconfiguration-USER_PASSWORD_AUTH.json"; sourceTree = SOURCE_ROOT; };
+		1EEF4B1E27C937E600A5FBDB /* awsconfiguration-USER_SRP_AUTH.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "awsconfiguration-USER_SRP_AUTH.json"; sourceTree = SOURCE_ROOT; };
+		1EEF4B2227C9426D00A5FBDB /* AWSConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AWSConfiguration.swift; sourceTree = "<group>"; };
 		495B0885E58A295EE053329B /* Pods-iOS-Sample-Different-Auth.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS-Sample-Different-Auth.release.xcconfig"; path = "Target Support Files/Pods-iOS-Sample-Different-Auth/Pods-iOS-Sample-Different-Auth.release.xcconfig"; sourceTree = "<group>"; };
 		9EA470B68ED92E6B9BC33E06 /* Pods-iOS-Sample-Different-Auth.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS-Sample-Different-Auth.debug.xcconfig"; path = "Target Support Files/Pods-iOS-Sample-Different-Auth/Pods-iOS-Sample-Different-Auth.debug.xcconfig"; sourceTree = "<group>"; };
 		D8120E15CA7B4FE3968D4399 /* Pods_iOS_Sample_Different_Auth.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOS_Sample_Different_Auth.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -65,9 +71,12 @@
 		1EEF4B0527C92D2200A5FBDB /* iOS-Sample-Different-Auth */ = {
 			isa = PBXGroup;
 			children = (
-				1EEF4B1A27C934C000A5FBDB /* awsconfiguration.json */,
+				1EEF4B1C27C937E600A5FBDB /* awsconfiguration-CUSTOM-AUTH.json */,
+				1EEF4B1D27C937E600A5FBDB /* awsconfiguration-USER_PASSWORD_AUTH.json */,
+				1EEF4B1E27C937E600A5FBDB /* awsconfiguration-USER_SRP_AUTH.json */,
 				1EEF4B0627C92D2200A5FBDB /* AppDelegate.swift */,
 				1EEF4B0827C92D2200A5FBDB /* SceneDelegate.swift */,
+				1EEF4B2227C9426D00A5FBDB /* AWSConfiguration.swift */,
 				1EEF4B0A27C92D2200A5FBDB /* ViewController.swift */,
 				1EEF4B0C27C92D2200A5FBDB /* Main.storyboard */,
 				1EEF4B0F27C92D2400A5FBDB /* Assets.xcassets */,
@@ -154,10 +163,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1EEF4B1B27C934C000A5FBDB /* awsconfiguration.json in Resources */,
 				1EEF4B1327C92D2400A5FBDB /* LaunchScreen.storyboard in Resources */,
+				1EEF4B2027C937E600A5FBDB /* awsconfiguration-USER_PASSWORD_AUTH.json in Resources */,
+				1EEF4B1F27C937E600A5FBDB /* awsconfiguration-CUSTOM-AUTH.json in Resources */,
 				1EEF4B1027C92D2400A5FBDB /* Assets.xcassets in Resources */,
 				1EEF4B0E27C92D2200A5FBDB /* Main.storyboard in Resources */,
+				1EEF4B2127C937E600A5FBDB /* awsconfiguration-USER_SRP_AUTH.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -210,6 +221,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1EEF4B2327C9426D00A5FBDB /* AWSConfiguration.swift in Sources */,
 				1EEF4B0B27C92D2200A5FBDB /* ViewController.swift in Sources */,
 				1EEF4B0727C92D2200A5FBDB /* AppDelegate.swift in Sources */,
 				1EEF4B0927C92D2200A5FBDB /* SceneDelegate.swift in Sources */,

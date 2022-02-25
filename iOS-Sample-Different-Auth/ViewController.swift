@@ -24,8 +24,8 @@ class ViewController: UIViewController {
         do {
             try AWSConfiguration.configure(authFile: authType.rawValue)
             print("Yayy SDK configured")
-        } catch _ {
-           print("Some kind of exception")
+        } catch {
+           print("Some kind of exception \(error)")
         }
     }
 }
