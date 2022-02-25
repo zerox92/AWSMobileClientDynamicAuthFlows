@@ -7,12 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1341E53B153CF2041ED52A28 /* Pods_iOS_Sample_Different_Auth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8120E15CA7B4FE3968D4399 /* Pods_iOS_Sample_Different_Auth.framework */; };
 		1EEF4B0727C92D2200A5FBDB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EEF4B0627C92D2200A5FBDB /* AppDelegate.swift */; };
 		1EEF4B0927C92D2200A5FBDB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EEF4B0827C92D2200A5FBDB /* SceneDelegate.swift */; };
 		1EEF4B0B27C92D2200A5FBDB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EEF4B0A27C92D2200A5FBDB /* ViewController.swift */; };
 		1EEF4B0E27C92D2200A5FBDB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1EEF4B0C27C92D2200A5FBDB /* Main.storyboard */; };
 		1EEF4B1027C92D2400A5FBDB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1EEF4B0F27C92D2400A5FBDB /* Assets.xcassets */; };
 		1EEF4B1327C92D2400A5FBDB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1EEF4B1127C92D2400A5FBDB /* LaunchScreen.storyboard */; };
+		1EEF4B1B27C934C000A5FBDB /* awsconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = 1EEF4B1A27C934C000A5FBDB /* awsconfiguration.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,10 @@
 		1EEF4B0F27C92D2400A5FBDB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1EEF4B1227C92D2400A5FBDB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1EEF4B1427C92D2400A5FBDB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1EEF4B1A27C934C000A5FBDB /* awsconfiguration.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = awsconfiguration.json; sourceTree = SOURCE_ROOT; };
+		495B0885E58A295EE053329B /* Pods-iOS-Sample-Different-Auth.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS-Sample-Different-Auth.release.xcconfig"; path = "Target Support Files/Pods-iOS-Sample-Different-Auth/Pods-iOS-Sample-Different-Auth.release.xcconfig"; sourceTree = "<group>"; };
+		9EA470B68ED92E6B9BC33E06 /* Pods-iOS-Sample-Different-Auth.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS-Sample-Different-Auth.debug.xcconfig"; path = "Target Support Files/Pods-iOS-Sample-Different-Auth/Pods-iOS-Sample-Different-Auth.debug.xcconfig"; sourceTree = "<group>"; };
+		D8120E15CA7B4FE3968D4399 /* Pods_iOS_Sample_Different_Auth.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOS_Sample_Different_Auth.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1341E53B153CF2041ED52A28 /* Pods_iOS_Sample_Different_Auth.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +49,8 @@
 			children = (
 				1EEF4B0527C92D2200A5FBDB /* iOS-Sample-Different-Auth */,
 				1EEF4B0427C92D2200A5FBDB /* Products */,
+				F0C718ABB5E398244E4757FE /* Pods */,
+				4354C01E1447EF4DC70B2B26 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,6 +65,7 @@
 		1EEF4B0527C92D2200A5FBDB /* iOS-Sample-Different-Auth */ = {
 			isa = PBXGroup;
 			children = (
+				1EEF4B1A27C934C000A5FBDB /* awsconfiguration.json */,
 				1EEF4B0627C92D2200A5FBDB /* AppDelegate.swift */,
 				1EEF4B0827C92D2200A5FBDB /* SceneDelegate.swift */,
 				1EEF4B0A27C92D2200A5FBDB /* ViewController.swift */,
@@ -67,6 +77,23 @@
 			path = "iOS-Sample-Different-Auth";
 			sourceTree = "<group>";
 		};
+		4354C01E1447EF4DC70B2B26 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D8120E15CA7B4FE3968D4399 /* Pods_iOS_Sample_Different_Auth.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F0C718ABB5E398244E4757FE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9EA470B68ED92E6B9BC33E06 /* Pods-iOS-Sample-Different-Auth.debug.xcconfig */,
+				495B0885E58A295EE053329B /* Pods-iOS-Sample-Different-Auth.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +101,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1EEF4B1727C92D2400A5FBDB /* Build configuration list for PBXNativeTarget "iOS-Sample-Different-Auth" */;
 			buildPhases = (
+				BF2248A5DB0DA2B541E9DC10 /* [CP] Check Pods Manifest.lock */,
 				1EEF4AFF27C92D2200A5FBDB /* Sources */,
 				1EEF4B0027C92D2200A5FBDB /* Frameworks */,
 				1EEF4B0127C92D2200A5FBDB /* Resources */,
+				FCCB2F43F93CDA6E3868ED9E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -125,6 +154,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1EEF4B1B27C934C000A5FBDB /* awsconfiguration.json in Resources */,
 				1EEF4B1327C92D2400A5FBDB /* LaunchScreen.storyboard in Resources */,
 				1EEF4B1027C92D2400A5FBDB /* Assets.xcassets in Resources */,
 				1EEF4B0E27C92D2200A5FBDB /* Main.storyboard in Resources */,
@@ -132,6 +162,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		BF2248A5DB0DA2B541E9DC10 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-iOS-Sample-Different-Auth-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FCCB2F43F93CDA6E3868ED9E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-iOS-Sample-Different-Auth/Pods-iOS-Sample-Different-Auth-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-iOS-Sample-Different-Auth/Pods-iOS-Sample-Different-Auth-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-iOS-Sample-Different-Auth/Pods-iOS-Sample-Different-Auth-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		1EEF4AFF27C92D2200A5FBDB /* Sources */ = {
@@ -284,6 +356,7 @@
 		};
 		1EEF4B1827C92D2400A5FBDB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9EA470B68ED92E6B9BC33E06 /* Pods-iOS-Sample-Different-Auth.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -311,6 +384,7 @@
 		};
 		1EEF4B1927C92D2400A5FBDB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 495B0885E58A295EE053329B /* Pods-iOS-Sample-Different-Auth.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
